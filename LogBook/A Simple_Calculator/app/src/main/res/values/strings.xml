@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Simple_Calculator_by_me</string>
+    <string name="ac">AC</string>
+    <string name="divide">/</string>
+    <string name="point">.</string>
+    <string name="plus">+</string>
+</resources>

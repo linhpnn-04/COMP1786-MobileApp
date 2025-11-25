@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_size">350dp</dimen>
+    <dimen name="padding_default">20dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+    <dimen name="text_size">20dp</dimen>
+</resources>
