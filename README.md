@@ -1,8 +1,8 @@
 # M-HIKE APPLICATION - COURSEWORK SUBMISSION
 
 **Student Name:** Nguyen Ngoc Phuong Linh
-**Student ID:** GCS220260
-**Course:** Mobile Application Development
+* **Student ID:** GCS220260
+* **Course:** Mobile Application Development
 
 ---
 
