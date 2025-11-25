@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             Title="Hiker Management App">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15"
+            VerticalOptions="Start"
+            HorizontalOptions="FillAndExpand">
+
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#56B4FF" HasShadow="True">
+                <Label Text="Hike Information" 
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" 
+                       FontSize="20"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+            <VerticalStackLayout>
+                <Label Text="Name of Hike *" FontAttributes="Bold" TextColor="#235347"/>
+                <Entry x:Name="txtName" 
+                       Placeholder="e.g. Snowdon" 
+                       ClearButtonVisibility="WhileEditing"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Location *" FontAttributes="Bold" TextColor="#235347"/>
+                <Entry x:Name="txtLocation" 
+                       Placeholder="Enter location"
+                       ClearButtonVisibility="WhileEditing"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Date of Hike *" FontAttributes="Bold" TextColor="#235347"/>
+                <DatePicker x:Name="dtDate" 
+                            Format="dd/MM/yyyy" 
+                            MinimumDate="01/01/2020"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Parking Available? *" FontAttributes="Bold" TextColor="#235347"/>
+                <HorizontalStackLayout Spacing="20">
+                    <RadioButton x:Name="rbParkingYes" Content="Yes" GroupName="Parking" IsChecked="True" TextColor="Black"/>
+                    <RadioButton x:Name="rbParkingNo" Content="No" GroupName="Parking" TextColor="Black"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Length (km) *" FontAttributes="Bold" TextColor="#235347"/>
+                <Entry x:Name="txtLength" 
+                       Placeholder="0.0" 
+                       Keyboard="Numeric" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Level of Difficulty *" FontAttributes="Bold" TextColor="#235347"/>
+                <Picker x:Name="pkrDifficulty" Title="Select level">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Easy</x:String>
+                            <x:String>Moderate</x:String>
+                            <x:String>High</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Description (Optional)" FontAttributes="Bold" TextColor="#235347"/>
+                <Editor x:Name="txtDescription" 
+                        Placeholder="Enter description here..." 
+                        AutoSize="TextChanges" 
+                        HeightRequest="100"
+                        BackgroundColor="#F5F5F5"/>
+            </VerticalStackLayout>
+
+            <Button
+                x:Name="btnSave"
+                Text="SAVE HIKE"
+                BackgroundColor="#56B4FF"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="20"
+                Margin="0,10,0,10"
+                Clicked="OnSaveClicked"
+                HorizontalOptions="Fill" />
+            <Button x:Name="btnView" 
+                    Text="View all hike" 
+                    Clicked="btnView_Clicked"
+                    CornerRadius="20"
+                    BackgroundColor="#000000"
+                    Margin="0,20,0,20"
+                    HorizontalOptions="Fill"/>
+            
+            <Button x:Name="btnLoad" 
+                    Text="Load Hike from DB"
+                    BackgroundColor="#FF9800"
+                    Clicked="btnLoad_Clicked"
+                    CornerRadius="20"
+                    Margin="0,10,0,10"
+                    HorizontalOptions="Fill"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

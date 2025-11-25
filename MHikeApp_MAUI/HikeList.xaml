@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.HikeList"
+             Title="My Hikes"
+             BackgroundColor="#F5F5F5">
+    <CollectionView x:Name="collectionView" 
+                    SelectionMode="Single" 
+                    ItemsLayout="VerticalList" 
+                    Margin="10">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="15" 
+                       CornerRadius="15" 
+                       Margin="0,8"
+                       BackgroundColor="#DAF1DE"
+                       HasShadow="True"
+                       BorderColor="Transparent">
+
+                    <Grid ColumnSpacing="10" RowSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Text="Name:" FontAttributes="Bold" TextColor="#0B2B26"/>
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="#0B2B26" FontAttributes="Bold" FontSize="16"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="Date:" FontAttributes="Bold" TextColor="#235347"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}" TextColor="#000000"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Text="Location:" FontAttributes="Bold" TextColor="#235347"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Location}" TextColor="#000000"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Text="Length:" FontAttributes="Bold" TextColor="#235347"/>
+                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding Length}" TextColor="#000000"/>
+
+                        <Label Grid.Row="4" Grid.Column="0" Text="Parking:" FontAttributes="Bold" TextColor="#235347"/>
+                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding ParkingText}" TextColor="#000000"/>
+
+                        <Label Grid.Row="5" Grid.Column="0" Text="Difficulty:" FontAttributes="Bold" TextColor="#235347"/>
+                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding Difficulty}" TextColor="#000000"/>
+
+                        <Label Grid.Row="6" Grid.Column="0" Text="Desc:" FontAttributes="Bold" TextColor="#235347"/>
+                        <Label Grid.Row="6" Grid.Column="1" Text="{Binding Description}" FontSize="Small" TextColor="#555555"/>
+
+                        <HorizontalStackLayout Grid.Row="7" Grid.ColumnSpan="2" 
+                                               Spacing="15" 
+                                               Margin="0,15,0,0"
+                                               HorizontalOptions="Center">
+
+                            <Button Text="EDIT"
+                                    BackgroundColor="#235347"
+                                    TextColor="White"
+                                    FontAttributes="Bold"
+                                    CornerRadius="20"
+                                    HeightRequest="40"
+                                    WidthRequest="100"
+                                    Clicked="OnEditClicked"
+                                    CommandParameter="{Binding .}" />
+
+                            <Button Text="DELETE"
+                                    BackgroundColor="#B71C1C"
+                                    TextColor="White"
+                                    FontAttributes="Bold"
+                                    CornerRadius="20"
+                                    HeightRequest="40"
+                                    WidthRequest="100"
+                                    Clicked="OnDeleteClicked"
+                                    CommandParameter="{Binding .}" />
+
+                        </HorizontalStackLayout>
+
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

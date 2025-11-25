@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.HikeEditPage"
+             Title="Edit Hike">
+    <ScrollView>
+        <VerticalStackLayout Spacing="12" Padding="12">
+            <VerticalStackLayout>
+                <Label Text="Name of Hike *" FontAttributes="Bold" TextColor="#235347"/>
+                <Entry x:Name="txtName" Placeholder="e.g. Snowdon" ClearButtonVisibility="WhileEditing"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Location *" FontAttributes="Bold" TextColor="#235347"/>
+                <Entry x:Name="txtLocation" Placeholder="Enter location" ClearButtonVisibility="WhileEditing"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Date of Hike *" FontAttributes="Bold" TextColor="#235347"/>
+                <DatePicker x:Name="dtDate" Format="dd/MM/yyyy" MinimumDate="2020-01-01"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Parking Available? *" FontAttributes="Bold" TextColor="#235347"/>
+                <HorizontalStackLayout Spacing="20">
+                    <RadioButton x:Name="rbParkingYes" Content="Yes" GroupName="Parking" IsChecked="True" TextColor="Black"/>
+                    <RadioButton x:Name="rbParkingNo" Content="No" GroupName="Parking" TextColor="Black"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Length (km) *" FontAttributes="Bold" TextColor="#235347"/>
+                <Entry x:Name="txtLength" Placeholder="0.0" Keyboard="Numeric" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Level of Difficulty *" FontAttributes="Bold" TextColor="#235347"/>
+                <Picker x:Name="pkrDifficulty" Title="Select level">
+                    <Picker.Items>
+                        <x:String>Easy</x:String>
+                        <x:String>Moderate</x:String>
+                        <x:String>High</x:String>
+                    </Picker.Items>
+                </Picker>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Description (Optional)" FontAttributes="Bold" TextColor="#235347"/>
+                <Editor x:Name="txtDescription" Placeholder="Enter description here..." AutoSize="TextChanges" HeightRequest="100" BackgroundColor="#F5F5F5"/>
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout Spacing ="20">
+                <Button Text="Save" Clicked="OnSaveClicked"  
+                         BackgroundColor="#56B4FF" />
+                <Button Text="Cancel" Clicked="OnCancelClicked" 
+                          BackgroundColor="#B71C1C" />/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="HikeEditPage.xaml" />
+    <File Path="HikeEditPage.xaml.cs" />
+  </Folder>
+  <Project Path="MauiApp2.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
