@@ -30,7 +30,7 @@ To run these projects, the following environments are required:
 2.  Select **File > Open** and navigate to the `M-HikeApp` folder.
 3.  Wait for Gradle sync to complete.
 4.  Select an Emulator (e.g., Pixel 5 API 33).
-5.  Before click the Run button please open Configulation and choose the MainActivity-main page
+5.  Before click the Run button please open Edit Configuration and choose the MainActivity- the main page
 5.  Click the **Run (Play)** button.
 
 ### B. Xamarin/MAUI Version (Folder: `M-HikeApp_MAUI`)
