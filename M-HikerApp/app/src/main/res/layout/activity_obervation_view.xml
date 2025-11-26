@@ -16,7 +16,7 @@
         android:padding="8dp"
         android:text="My Observations"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold"
 
         app:layout_constraintTop_toTopOf="parent"

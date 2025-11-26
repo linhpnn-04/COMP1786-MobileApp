@@ -259,12 +259,12 @@ public class MainActivity extends AppCompatActivity {
         int rowsAffected = dbHelper.updateHike(updatedHike); // <--- SỬA LỖI GỌI PHƯƠNG THỨC updateHike
 
         if (rowsAffected > 0) {
-            Toast.makeText(this, "Chuyến đi đã được cập nhật thành công!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Your hike has been updated successfully!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, MhikeApp.class);
             startActivity(intent);
             finish();
         } else {
-            Toast.makeText(this, "Lỗi khi cập nhật chuyến đi.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error: Can not update your hike.", Toast.LENGTH_SHORT).show();
         }
     }
 

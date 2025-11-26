@@ -19,7 +19,7 @@
         android:layout_width="323dp"
         android:layout_height="wrap_content"
         android:text="name of obervation"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textColor="@color/midGreen"
         android:textStyle="bold" />
 
