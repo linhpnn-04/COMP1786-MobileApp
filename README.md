@@ -11,14 +11,14 @@ This submission contains two versions of the M-Hike application as required:
 1.  **Android Native:** Built with Java in Android Studio.
 2.  **Cross-Platform:** Built with C#/.NET MAUI in Visual Studio 2026.
 
-Both applications allow hikers to store, view, search, and manage hiking trips and observations with offline SQLite database storage.
+Both applications allow hikers to store, add, edit, delete, view, search, delete all  and manage hiking trips and observations with offline SQLite database storage.
 
 ---
 
 ## 2. PREREQUISITES
 To run these projects, the following environments are required:
 * **For Android Native:** Android Studio.
-* **For MAUI:** Visual Studio 2022 with ".NET Multi-platform App UI development" workload installed.
+* **For MAUI:** Visual Studio 2026 with ".NET Multi-platform App UI development" workload installed.
 * **Emulator:** Pixel 5 (API 33 or API 31 recommended) for MAUI and Medium Phone for Android Studio.
 
 ---
@@ -30,7 +30,7 @@ To run these projects, the following environments are required:
 2.  Select **File > Open** and navigate to the `M-HikeApp` folder.
 3.  Wait for Gradle sync to complete.
 4.  Select an Emulator (e.g., Pixel 5 API 33).
-5.  Before click the Run button please open Edit Configuration and choose the MHikeApp- the main page
+5.  Before click the Run button please open **Edit Configuration** and choose the MHikeApp- the main page
 5.  Click the **Run (Play)** button.
 
 ### B. Xamarin/MAUI Version (Folder: `M-HikeApp_MAUI`)
